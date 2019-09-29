@@ -3,7 +3,6 @@ const int MPU=0x68;  //MPU 6050 의 I2C 기본 주소
 int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
 
 void setup() {
-  // put your setup code here, to run once:
   Wire.begin();      //Wire 라이브러리 초기화
   Wire.beginTransmission(MPU); //MPU로 데이터 전송 시작
   Wire.write(0x6B);  // PWR_MGMT_1 register
@@ -13,8 +12,8 @@ void setup() {
 
   AcO_1 = s
 }
+
 void loop() {
-  // put your main code here, to run repeatedly:
   Wire.beginTransmission(MPU);    //데이터 전송시작
   Wire.write(0x3B);               // register 0x3B (ACCEL_XOUT_H), 큐에 데이터 기록
   Wire.endTransmission(false);    //연결유지
