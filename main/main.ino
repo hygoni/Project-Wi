@@ -1,5 +1,5 @@
 #include<Wire.h>
-const int MPU=0x68;  //MPU 6050 의 I2C 기본 주소
+const int MPU = 0x68;  //MPU 6050 의 I2C 기본 주소
 int16_t AcX,AcY,AcZ,Tmp,GyX,GyY,GyZ;
 
 void setup() {
